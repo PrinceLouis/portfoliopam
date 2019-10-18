@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/profile.jpg"/>
+  <title>Jameson Louis - Portfolio</title>
+  <meta name="description" content="">
+  <meta name="author" content="Jameson Louis">
+  <meta name="keywords" content="React, Landing page, Portfolio template, Bootstrap template, Responsive html5 template">
+  <link rel="stylesheet" href="css/styles.min.css" id="css-main">
+  <script src="../../use.fontawesome.com/e65fc10c49.js"></script>
+
+  <!-- Remove style switcher css -->
+  <style>
+    .palette-wrapper {
+      background-color: #fff;
+      border: 2px solid #39b54a;
+      border-left: 0px;
+      left: 0px;
+      padding: 15px;
+      position: fixed;
+      top: 200px;
+      -webkit-transition: margin 0.2s linear;
+      -moz-transition: margin 0.2s linear;
+      -o-transition: margin 0.2s linear;
+      transition: margin 0.2s linear;
+      width: 180px;
+      z-index: 999999
+    }
+
+    .palette-wrapper select {
+      display: block;
+      margin-bottom: 15px;
+      width: 100%
+    }
+
+    .palette-closed {
+      margin-left: -180px
+    }
+
+    h2.palette-title,
+    .block-content h3.palette-title {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 12px;
+      font-weight: bold;
+      margin: 0px 0px 10px 0px;
+      padding-bottom: 5px;
+      text-transform: uppercase
+    }
+
+    .palette-colors {
+      margin: 0px;
+      padding: 0px
+    }
+
+    .palette-colors li {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      display: block;
+      float: left;
+      list-style: none;
+      margin-bottom: 11px;
+      margin-right: 11px
+    }
+
+    .palette-colors li:nth-child(4n) {
+      margin-right: 0px
+    }
+
+    .palette-colors a {
+      background-color: red;
+      display: block;
+      height: 24px;
+      margin: 1px;
+      width: 24px
+    }
+
+    .palette-toggle {
+      background-color: black;
+      border: 2px solid black;
+      border-left: 0px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1;
+      position: absolute;
+      right: -42px;
+      text-align: center;
+      text-transform: uppercase;
+      top: -2px;
+      width: 40px
+    }
+
+    .palette-toggle .palette-toggle-inner {
+      border: 1px solid #fff;
+      height: 100px;
+      padding: 66px 0px 0px 0px
+    }
+
+    .palette-toggle span {
+      display: block;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      white-space: nowrap
+    }
+
+    .palette-toggle i {
+      display: inline;
+      margin-right: 8px
+    }
+
+    .palette-color-green a {
+      background-color: #07cb79;
+    }
+
+    .palette-color-red a {
+      background-color: #e83b35;
+    }
+
+    .palette-color-cyan a {
+      background-color: #07aaf5;
+    }
+
+    .palette-color-purple a {
+      background-color: #8e45ae;
+    }
+    .palette-color-gradient a {
+      background-image: linear-gradient(to right, rgb(255, 195, 113) 0%, rgb(255, 95, 109) 100%);
+    }
+  </style>
+  <!-- Remove Style switcher css end -->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+      <!-- color options -->
+      <div class="palette-wrapper palette-closed">
+        <div class="palette-inner">
+          <div class="palette-toggle">
+            <div class="palette-toggle-inner">
+              <span><i class="fa fa-cog fa-spin"></i>Colors</span>
+            </div>
+          </div>
+          <h2 class="palette-title">Color Variant</h2>
+          <ul class="palette-colors clearfix">
+            <li class="palette-color-red"><a href="css/red.min.css"></a></li>
+            <li class="palette-color-purple"><a href="css/purple.min.css"></a></li>
+            <li class="palette-color-cyan"><a href="css/cyan.min.css"></a></li>
+            <li class="palette-color-green"><a href="css/green.min.css"></a></li>
+          
+          </ul>
+        </div>
+      </div>
+      <!-- color options end -->
+      <!-- preloader -->
+      <div id="preloader">
+        <div class="sk-wave">
+          <div class="sk-rect sk-rect1"></div>
+          <div class="sk-rect sk-rect2"></div>
+          <div class="sk-rect sk-rect3"></div>
+          <div class="sk-rect sk-rect4"></div>
+          <div class="sk-rect sk-rect5"></div>
+        </div>
+      </div>
+      <!-- preloader end -->
+      <header class="container-fluid sdm-bg" id="home">
+        <div class="row">
+          <div class="overlay"></div>
+          <!-- main menu -->
+          <ul class="nav nav-pills menu-center margin-top-30 scroll-nav">
+            <li role="presentation" class="active"><a href="#home"><i class="fa fa-home"></i></a></li>
+            <li role="presentation"><a href="#portfolio">Portfolio</a></li>
+            <li role="presentation"><a href="#reviews">Reviews</a></li>
+            <li role="presentation"><a href="#about_me">About Me</a></li>
+            <li role="presentation"><a href="#expertness">Services</a></li>
+            <li role="presentation"><a href="#contact_me">Contact</a></li>
+          </ul>
+          <!-- main menu end -->
+          <img src="images/profile.jpg" class="margin-top-76 img-circle center-block profile_picture" alt="profile picture">
+          <h1 class="text-capitalize text-center">Jameson Louis </br>( PrinceLouis )</h1>
+          <h3 class="text-capitalize text-center">Software developer </br>Digital marketing specialist </br>Coach/Entrepreneur</h3>
+          <hr/>
+          <div class="text-center margin-bottom-135">
+            <ul class="social-networks spin-icon">
+              <li><a href="https://www.facebook.com/princelouisx509" class="icon-facebook">Facebook</a></li>
+              <li><a href="https://twitter.com/princelouisx509" class="icon-twitter">Twitter</a></li>
+              <li><a href="https://www.linkedin.com/princelouisx509" class="icon-linkedin">LinkedIn</a></li>
+             
+              <li><a href="https://instagram.com/princelouisx509" class="icon-instagram">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <section class="container position-relative" id="portfolio">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 position-absolute">
+            <div class="text-center filter-btns">
+              <!-- filter btn -->
+              <ul class="nav nav-pills">
+                <li role="presentation">
+                  <a href="javascript:void(0)" id="all" class="btn" data-mixitup-control data-filter="all">All</a>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:void(0)" class="btn" data-mixitup-control data-filter=".web">Web development</a>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:void(0)" class="btn" data-mixitup-control data-filter=".android">Digital marketing</a>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:void(0)" class="btn" data-mixitup-control data-filter=".ios">Coaching/Mentoring</a>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:void(0)" class="btn" data-mixitup-control data-filter=".desktop">Tech support</a>
+                </li>
+              </ul>
+              <!-- filter btn end-->
+            </div>
+            <!-- mixitup container -->
+            <div class="row" id="mix-wrapper">
+              <div id="effect-5">
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target web" data-order="1">
+                  <figure>
+                    <img src="images/portfolio/port1.jpg" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#myModal">
+                        <h3>Web App design concept</h3>
+                        <hr>                      
+                        <p>Web app development</p>
+                      </a>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target web" data-order="2">
+                  <figure>
+                    <img src="images/portfolio/imaj9.png" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#myModal">
+                        <h3>Built your website today</h3>
+                        <hr>
+                        <p>It's time to build your website today</p>                      
+                      </a>                      
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target web" data-order="2">
+                  <figure>
+                    <img src="images/portfolio/imaj5.jpg" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#myModal">
+                        <h3>Be online Built your website today</h3>
+                        <hr>
+                        <p>It's time to build your website</p>                      
+                      </a>                      
+                    </figcaption>
+                  </figure>
+                </div>
+
+
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target android" data-order="3">
+                  <figure>
+                    <img src="images/portfolio/imaj2.png" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#myModal">
+                        <h3>Let's manage your website</h3>
+                        <hr> 
+                        <p>Software developer/digital marketer</p> 
+                        </hr>                    
+                      </a>                      
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target android" data-order="3">
+                  <figure>
+                    <img src="images/portfolio/imaj3.png" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#myModal">
+                        <h3>Search engine optimization (SEO)</h3>
+                        <hr> 
+                        <p>Make your website to the 1th position</p>                    
+                      </a>                      
+                    </figcaption>
+                  </figure>
+                </div>
+
+                 <div class="col-md-4 col-sm-6 col-xs-6 mix-target android" data-order="3">
+                  <figure>
+                    <img src="images/portfolio/imaj10.jpg" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#myModal">
+                        <h3>Digital marketing services</h3>
+                        <hr> 
+                        <p>I offer many digital marketing services </p>                    
+                      </a>                      
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target ios" data-order="4">
+                  <figure target="_blank">
+                    <img src="images/portfolio/imaj16.jpg" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#myModal">
+                        <h3>Coaching & Mentoring</h3>
+                        <hr>
+                        <p>Do you need a coach to help you get success</p>                      
+                      </a>                      
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target ios" data-order="5">
+                  <figure>
+                    <img src="images/portfolio/imaj15.jpg" alt="">
+                    <figcaption>
+                      <a href="#" class="porto" data-toggle="modal" data-target="#myModal">
+                        <h3>Coaching & Mentoring</h3>
+                        <hr> 
+                        <p>Do you need a mentor to train you</p>                     
+                      </a>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target ios" data-order="5">
+                  <figure>
+                    <img src="images/portfolio/imaj18.png" alt="">
+                    <figcaption>
+                      <a href="#" class="porto" data-toggle="modal" data-target="#myModal">
+                        <h3>Coaching & Mentoring</h3>
+                        <hr> 
+                        <p>Do you need a mentor to train you</p>                     
+                      </a>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target desktop" data-order="6">
+                  <figure>
+                    <img src="images/portfolio/imaj12.jpg" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#myModal">
+                        <h3>Technical support</h3>
+                        <hr> 
+                        <p>Technical support (tech support) refers to a range services companies provide to their customers for products such as software, mobile phones, printers, and other electronic, mechanical or electromechanical products. Technical support services usually provide users with help in solving some common problems rather than providing training on how to use the product.</p>                   
+                      </a>                      
+                    </figcaption>
+                  </figure>
+                </div>
+
+
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target desktop" data-order="6">
+                  <figure>
+                    <img src="images/portfolio/imaj01.jpg" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#myModal">
+                        <h3>Technical support</h3>
+                        <hr> 
+                        <p>Do you need technical Support (Tech Support)?</p>   
+                      </a>                      
+                    </figcaption>
+                  </figure>
+                </div>
+
+                
+
+              </div>
+              <div class="col-sm-12 text-center">
+
+                <a href="#" class="btn btn-orange">Load More</a>
+              </div>
+
+            </div>
+            <!-- mixitup container end -->
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid sdm-bg" id="reviews">
+        <div class="row">
+          <div class="overlay"></div>
+          <!-- testimonials slider -->
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12" data-wow-delay="0.2s">
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                  <!-- Bottom Carousel Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="images/face09.jpg" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="images/face12.jpg" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="images/face3.jpg" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="3"><img class="img-responsive" src="images/face10.jpg" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="4"><img class="img-responsive" src="images/face8.jpg" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="5"><img class="img-responsive" src="images/face11.jpg" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="6"><img class="img-responsive" src="images/face5.jpg" alt="">
+                    </li>
+
+                    <li data-target="#quote-carousel" data-slide-to="7"><img class="img-responsive" src="images/face6.jpg" alt="">
+                    </li>
+                  </ol>
+
+                  <!-- Carousel Slides / Quotes -->
+                  <div class="carousel-inner text-center">
+
+
+                    <!-- Quote 0 -->
+                    
+
+                    <!-- Quote 1 -->
+                    <div class="item active">
+                      <blockquote>
+                        <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+
+                            <p>I have business of selling online clothes, after getting services from you, my sales is increased </p>
+                            <small>David C. Backer</small>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                    <!-- Quote 2 -->
+                    <div class="item">
+                      <blockquote>
+                        <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+
+                            <p>I am selling medicines through online portal, this company optimized by website, now we are on top of the google and getting good business from your Search Engine Optimization Services. Thank you very much </p>
+                            <small>Candio Edwards</small>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                    <!-- Quote 3 -->
+                    <div class="item">
+                      <blockquote>
+                        <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+
+                            <p>I was getting negative review on google, but as a Professional SEO Expert you  helped me to remove those negative reviews from the google. </p>
+                            <small>Daniela O'brian</small>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+
+
+
+
+<div class="item active">
+                      <blockquote>
+                        <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+
+                            <p>I have business of selling online clothes, after getting services from you, my sales is increased </p>
+                            <small>Christian Denis</small>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+
+
+<div class="item active">
+                      <blockquote>
+                        <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+
+                            <p>I’m very happy that we chose you to design our new site. The overall experience was great and we’ll definitely work with you again and/or recommend you to others. The end product definitely exceeded my expectations.I feel like we can sometimes be a difficult organization for vendors to work with but you was extremely flexible in working with us. </p>
+                            <small>Colas Jhon Smith </small>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+
+
+                    <div class="item active">
+                      <blockquote>
+                        <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+
+                            <p>I am very happy with your service. You are so patient and kind, you explain a lot of things that I don't understand about web marketing and entrepreneurship. </p>
+                            <small>Maxo Billy</small>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+
+                    <div class="item active">
+                      <blockquote>
+                        <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+
+                            <p>
+You promptly returned all my calls and emails (this is perhaps the most important way in which I judge a company). If communication is poor, then the company receives a poor grade from me. Your work quality and commitment to detail really ensured a great finished product.
+ </p>
+                            <small>Mayala Rose Helena</small>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+
+                    <div class="item active">
+                      <blockquote>
+                        <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+
+                            <p>We are very happy with you & your services. Our account manager is very knowledgeable, friendly, organized and helps keep us on track. When we need any technical work done, you do a fantastic job. You work directly with us to make sure our needs are met. We would highly recommend you to everyone! </p>
+                            <small>Annabel Jessica</small>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+
+                  </div>
+
+                  <!-- Carousel Buttons Next/Prev -->
+                  <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-angle-left fa-2x"></i></a>
+                  <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-angle-right fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- testimonials slider end -->
+        </div>
+      </section>
+      <section class="container" id="about_me">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-sm-12">
+            <div class="row">
+              <div class="col-md-5 col-sm-4 col-xs-12">
+                <h3><i class="fa fa-user"></i>About me</h3>
+                <div class="block">
+                  <p>
+                    I'm very passionate and dedicated to my work .With 5 years experience as a Software developer professional  &amp; Digital marketing, I have acquired the skills necessary to build great and premium websites. 
+                  </p>
+                  <p>
+                    You have an idea, you need someone to bring it to life. Or you already have a product that needs to be redined to meet the demand of your customers !. This is where i come in! With my knowledge and creativity. I can take your idea, your product to the next level. Let's have a chat and discuss your idea!
+                  </p>                  
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-4 col-xs-6">
+                <h3><i class="fa fa-building"></i>Work history</h3>
+                <div class="block">
+                  <h4>CEO</h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-building"></i> INNOVATECH HAITI</li>
+                    <li><i class="fa fa-clock-o"></i> 2015-Present</li>
+                  </ul>
+                </div> 
+                <div class="block">
+                  <h4> Software developer </h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-building"></i> DigitalizeM</li>
+                    <li><i class="fa fa-clock-o"></i> 2017-Present</li>
+                  </ul>
+                </div> 
+                <div class="block">
+                  <h4>Customer service agent</h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-building"></i> Great VirtualWork</li>
+                    <li><i class="fa fa-clock-o"></i> 2017-2018</li>
+                  </ul>
+                </div> 
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-6">
+                <h3><i class="fa fa-graduation-cap"></i>Education</h3>
+                <div class="block">
+                  <h4>Software developer</h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-book"></i> OPENCLASSROOMS</li>
+                    <li><i class="fa fa-clock-o"></i> 2017-Present</li>
+                  </ul>
+                </div> 
+                <div class="block">
+                  <h4>Digital Marketing</h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-book"></i> GOOGLE ACADEMY</li>
+                    <li><i class="fa fa-clock-o"></i> 2017-2018</li>
+                  </ul>
+                </div> 
+                <div class="block">
+                  <h4>Fines arts </h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-book"></i> FOSAJ -Art Center</li>
+                    <li><i class="fa fa-clock-o"></i> 2010-2014</li>
+                  </ul>
+                </div> 
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid sdm-bg" id="expertness">
+        <div class="row">
+          <div class="overlay"></div>
+          <div class="col-sm-12">
+            <h3 class="text-center"><i class="fa fa-bookmark"></i>What I Do</h3>
+          </div>
+        </div>
+        <section class="container">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <div class="block">
+                <i class="fa fa-android fa-3x"></i>
+                <i class="fa fa-apple fa-3x"></i>
+                <h4 class="text-uppercase">Mobile Apps</h4>
+                <p>
+                  I develop mobile apps for Android and iOS platforms and also complex web backend and frontend projects. My primary passion is turning your ideas into game-changing products across global markets
+                </p>
+              </div> 
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <div class="block">
+                <i class="fa fa-code fa-3x"></i>
+                <h4 class="text-uppercase">Web design & development</h4>
+                <p>
+                  I offer a complete range of web & mobile application services, including initial prototyping, UI/UX design, Android / iOS mobile development, as well as application backend and website infrastructure.
+                </p>
+              </div> 
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <div class="block">
+                <i class="fa fa-envelope fa-3x"></i>
+                <h4 class="text-uppercase">Digital marketing</h4>
+                <p>
+                  I offer complete packages of efficient digital marketing services that we adapt to fit your company's needs such as SEO-friendly websites, SEO, PPC, content writing, video production, social media, branding.
+                </p>
+              </div> 
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <div class="block">
+                <i class="fa fa-phone fa-3x"></i>
+                <h4 class="text-uppercase">Customer service</h4>
+                <p>
+                 I can provide service to yours customers needs over the phone and provide information on products/services and resolves any emerging problems that your customers might face with efficiency and accuracy.
+                </p>
+              </div> 
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <div class="block">
+                <i class="fa fa-lightbulb-o fa-3x"></i>
+                <h4 class="text-uppercase">graphic design & branding</h4>
+                <p>
+                  I offer a complete collection of graphics design services to showcase your identity such as Business Cards, Business Systems, Brochure Designs, Catalog Designs, Advertising designs, Signage designs,Logo designs,etc.
+                </p>
+              </div> 
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <div class="block">
+                <i class="fa fa-user fa-3x"></i>
+                <h4 class="text-uppercase">Coaching/Mentoring</h4>
+                <p>
+                  I provide a wide range of coaching services to meet your needs.Coaching services for leaders, professionals, entrepreneurs and executives.And also provide mentoring and support service for young people and adults on a confidential one to one basis.
+                </p>
+              </div> 
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="container" id="hire_me"> 
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h3>Need Any Help?</h3>
+            <h4><i class="fa fa-thumbs-up fa-2x"></i> I am available for freelance hire</h4>
+
+            <nav class="cl-effect-2">
+              <a href="#contact_me"><span data-hover="Hire Me">Hire Me</span></a>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid sdm-bg" id="contact_me">
+        <div class="row">
+          <div class="overlay"></div>
+          <div class="col-sm-12 text-center text-capitalize">
+            <h3>want to discuss a project?</h3>
+            <h4>just drop a message below and i'll get in touch!</h4>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <section class="col-sm-10 col-sm-offset-1">
+
+            <div class="row text-center">
+              <div class="col-sm-4 col-xs-12">
+                <div class="block">
+                  <i class="fa fa-envelope fa-2x"></i>
+                  <h4 class="text-uppercase">E-mail</h4>
+                  <ul class="list-unstyled">
+                    <li>contact@jamesonlouis.com</li>
+                    <li>janfiliplwi@gmail.com</li>
+                  </ul>
+                </div> 
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <div class="block">
+                  <i class="fa fa-phone fa-2x"></i>
+                  <h4 class="text-uppercase">Phone</h4>
+                  <ul class="list-unstyled">
+                    <li>+1 829 803-6295</li>
+                    <li>+509 3647-6025</li>
+                  </ul>
+                </div> 
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <div class="block">
+                  <i class="fa fa-home fa-2x"></i>
+                  <h4 class="text-uppercase">Office</h4>
+                  <ul class="list-unstyled">
+                    <li>Hoja del cayimito</li>
+                    <li>Santiago,DR</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+
+          <form name="contact" method="POST" data-netlify="true">
+  <div class="col-sm-6 col-xs-12">
+               <div class="form-group">
+   <label for="your_name">Your Name</label>
+                 <input type="text" class="form-control" id="your_name" placeholder="Write Your Name">
+               </div>  
+  
+  <div class="form-group">
+                <label for="your_email">Your E-mail</label>
+                <input type="email" class="form-control" id="your_email" placeholder="Enter Your Email">
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="your_message">Your Message</label>
+                <textarea class="form-control" rows="5" placeholder="Write Your Message"></textarea>
+                
+              </div>
+            </div>
+            <div class="col-sm-12 text-center margin-top-55 margin-bottom-55">
+              <button type="submit" class="btn btn-orange">Send Message</button>
+            </div>
+</form>
+
+
+          <div class="text-center row">
+            <div class="col-sm-12">
+              <ul class="social-networks spin-icon">
+                <li><a href="https://www.facebook.com/princelouisx509" class="icon-facebook">Facebook</a></li>
+                <li><a href="https://twitter.com/princelouisx509" class="icon-twitter">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/princelouisx509" class="icon-linkedin">LinkedIn</a></li>
+                <li><a href="https://instagram.com/princelouisx509" class="icon-instagram">Instagram</a></li>
+              </ul>
+              <p class="text-center margin-top-30">
+               &copy Copyright 2019 <a href="www.jamesonlouis.com">Jameson Louis Portfolio </a> 
+             </p>
+           </div>
+         </div>
+       </section>
+     </div>
+   </section>
+   <!-- Modal -->
+   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Jameson Louis Portfolio</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some portfolio description here. </p>
+          <img src="images/portfolio/profile.jpg" class="img-responsive" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end -->
+  <script src="js/main.min.js"></script>
+  <!-- Remove color switcher -->
+  <script>
+    $(document).ready(function() {
+      $('.palette-colors a').click(function(e) {
+        e.preventDefault();
+        var newCSSHref = $(this).attr('href');
+        $('#css-main').attr('href', newCSSHref);
+      });
+      // close the palette on click
+      $('.palette-toggle').click(function() {
+        $('.palette-wrapper').toggleClass('palette-closed');
+      });
+    });
+  </script>
+  <!-- Remove Color swither end -->
+</body>
+
+</html>
